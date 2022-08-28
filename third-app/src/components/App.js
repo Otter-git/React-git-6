@@ -10,7 +10,9 @@ function App() {
   const dispatch = useDispatch();
 
   const doDelete = (id) => {
-    dispatch({type: 'delete', payload: id})
+    dispatch({type: 'delete', payload: id, meta: {
+      delay: 3000
+    }})
   };
 
   const doAdd = () => {
